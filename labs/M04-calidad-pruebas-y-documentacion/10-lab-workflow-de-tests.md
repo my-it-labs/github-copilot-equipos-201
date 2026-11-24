@@ -18,7 +18,7 @@ Comprender qué es la integración continua asistida: cómo se genera un workflo
 CONFIRM=1 make reset
 ```
 
-- Tu fork en GitHub (`https://github.com/TU_USUARIO/github-copilot-teatralia-201`), con permiso para crear ramas y pull requests. Cambia `TU_USUARIO` por tu usuario en todo el lab.
+- Tu fork en GitHub (`https://github.com/TU_USUARIO/github-copilot-equipos-201`), con permiso para crear ramas y pull requests. Cambia `TU_USUARIO` por tu usuario en todo el lab.
 - Vista **Chat** de Copilot (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>I</kbd>).
 
 ### Qué está pasando
@@ -215,7 +215,7 @@ branch 'ci/tests-teatralia' set up to track 'origin/ci/tests-teatralia'.
 Abre la pull request **contra tu fork**, no contra el repositorio del curso:
 
 1. En GitHub, en tu fork, pulsa **Compare & pull request** en el aviso de la rama recién subida.
-2. En **base repository**, elige `TU_USUARIO/github-copilot-teatralia-201` y rama `main`.
+2. En **base repository**, elige `TU_USUARIO/github-copilot-equipos-201` y rama `main`.
 3. Pulsa **Create pull request**.
 
 > [!WARNING]

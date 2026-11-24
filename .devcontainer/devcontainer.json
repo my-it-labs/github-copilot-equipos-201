@@ -3,7 +3,7 @@
   "dockerComposeFile": ["../infra/compose.yaml", "compose.devcontainer.yaml"],
   "service": "workspace",
   "runServices": ["postgres", "redis", "mailpit", "workspace"],
-  "workspaceFolder": "/workspaces/github-copilot-teatralia-201",
+  "workspaceFolder": "/workspaces/github-copilot-equipos-201",
   "shutdownAction": "stopCompose",
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}

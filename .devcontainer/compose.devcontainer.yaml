@@ -4,7 +4,7 @@ services:
     image: mcr.microsoft.com/devcontainers/typescript-node:22
     command: sleep infinity
     volumes:
-      - ..:/workspaces/github-copilot-teatralia-201:cached
+      - ..:/workspaces/github-copilot-equipos-201:cached
     environment:
       TEATRALIA_DEVCONTAINER: "1"
       DATABASE_URL: postgres://teatralia:teatralia@postgres:5432/teatralia

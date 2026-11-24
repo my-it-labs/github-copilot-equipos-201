@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "github-copilot-equipos-201",
+      "path": "/home/david/Cursos/github-copilot-equipos-201"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true
+    }
+  }
+}

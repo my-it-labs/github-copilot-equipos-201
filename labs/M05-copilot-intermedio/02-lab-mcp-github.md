@@ -129,7 +129,7 @@ El servidor de GitHub publica decenas de herramientas. Cuantas más marcadas, m�
 Escribe en el chat (cambia `<tu-usuario>` por tu cuenta de GitHub):
 
 ```text
-Lista los issues abiertos de <tu-usuario>/github-copilot-teatralia-201 con la etiqueta bug.
+Lista los issues abiertos de <tu-usuario>/github-copilot-equipos-201 con la etiqueta bug.
 Para cada uno: número, título y en qué parte de Teatralia crees que está el fallo.
 ```
 
@@ -165,7 +165,7 @@ teatralia/docs/backlog/TEA-108-busqueda-de-pedidos.md
 Atención al cliente ha detectado que eventos marcados como agotados tienen plazas libres tras los reembolsos. Pide a Copilot que lo dé de alta:
 
 ```text
-Crea un issue en <tu-usuario>/github-copilot-teatralia-201 con:
+Crea un issue en <tu-usuario>/github-copilot-equipos-201 con:
 - Título: TEA-113 · Un evento sigue «agotado» cuando se liberan plazas
 - Cuerpo: Cuando se reembolsa o se anula una entrada de un evento en estado sold_out, la
   plaza vuelve a la venta pero el evento sigue mostrándose como agotado (por ejemplo
@@ -244,7 +244,7 @@ Deja el servidor de GitHub con lo mínimo que el equipo necesita para trabajar c
 Un prompt que funciona:
 
 ```text
-Antes de crear nada, busca en <tu-usuario>/github-copilot-teatralia-201 issues (abiertos o
+Antes de crear nada, busca en <tu-usuario>/github-copilot-equipos-201 issues (abiertos o
 cerrados) cuyo título contenga "TEA-113". Dime qué has encontrado.
 - Si existe alguno, NO crees nada y dame su número.
 - Si no existe, crea el issue con título "TEA-113 · Un evento sigue «agotado» cuando se liberan
@@ -288,10 +288,10 @@ Cómo se lee: el script es determinista; el chat solo lo es si se lo pides y lo 
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
 | `make backlog` falla con `has disabled issues` | Los forks nacen con Issues desactivados | En tu fork: **Settings** → **General** → **Features** → **Issues** |
-| Copilot lista issues del repositorio del curso, no de tu fork | No le diste el repositorio y eligió el original | Escribe siempre `<tu-usuario>/github-copilot-teatralia-201` en el prompt |
+| Copilot lista issues del repositorio del curso, no de tu fork | No le diste el repositorio y eligió el original | Escribe siempre `<tu-usuario>/github-copilot-equipos-201` en el prompt |
 | `github` no arranca o pide sesión en bucle | La cuenta elegida al autenticar no es la del fork, o la organización bloquea MCP | **Accounts** (icono de persona, abajo a la izquierda) → cierra la sesión de GitHub y vuelve a **Start Server** con tu cuenta personal |
 | Copilot no usa las herramientas de GitHub | Modo Ask/Edit, o el grupo `github` desmarcado | Modo **Agent** y **Configure Tools…** |
-| `gh issue list` devuelve otros issues | `gh` apunta al repositorio original | Añade `-R <tu-usuario>/github-copilot-teatralia-201` |
+| `gh issue list` devuelve otros issues | `gh` apunta al repositorio original | Añade `-R <tu-usuario>/github-copilot-equipos-201` |
 
 ## Conclusiones
 
@@ -305,7 +305,7 @@ Un servidor remoto, mantenido por GitHub, que publica la API de GitHub como herr
 |-----------|----------------------|
 | Solo las herramientas necesarias | **Configure Tools…** con las de issues; o la URL `/x/issues` |
 | Escritura con revisión | Desplegar la llamada y revisar argumentos antes de **Allow** |
-| Repositorio explícito | `<tu-usuario>/github-copilot-teatralia-201` en cada prompt |
+| Repositorio explícito | `<tu-usuario>/github-copilot-equipos-201` en cada prompt |
 | Comprobación en la fuente | `gh issue list` y la web de GitHub, no el resumen del chat |
 
 ### Dónde se rompe y cómo lo has detectado

@@ -221,7 +221,7 @@ gh issue comment 3 --body-file /tmp/tea-103-preguntas.md
 ```
 
 **Resultado esperado:** `gh issue comment` imprime la URL del comentario
-(`https://github.com/<tu-usuario>/github-copilot-teatralia-201/issues/3#issuecomment-…`). En la pestaña **Issues**
+(`https://github.com/<tu-usuario>/github-copilot-equipos-201/issues/3#issuecomment-…`). En la pestaña **Issues**
 del fork, TEA-103 muestra tu comentario.
 
 <details>

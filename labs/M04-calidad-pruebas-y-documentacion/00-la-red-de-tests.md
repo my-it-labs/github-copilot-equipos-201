@@ -33,7 +33,7 @@ npx vitest run services/api/test/pricing.test.ts --reporter=verbose
 ```
 
 ```text
- RUN  v5.0.5 /workspaces/github-copilot-teatralia-201/teatralia
+ RUN  v5.0.5 /workspaces/github-copilot-equipos-201/teatralia
 
  ✓ |api| test/pricing.test.ts > calcOrderAmounts > suma precio y gastos de gestión por entrada 2ms
  ✓ |api| test/pricing.test.ts > calcOrderAmounts > calcula la comisión de plataforma 0ms

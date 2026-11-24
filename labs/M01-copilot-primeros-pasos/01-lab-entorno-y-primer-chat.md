@@ -33,7 +33,7 @@ El curso es individual: en tu fork harás cambios, ramas y pull requests sin pis
 3. En **Owner**, elige tu **usuario personal** (no la organización de tu empresa). Deja el nombre como está.
 4. Pulsa **Create fork**.
 
-**Resultado esperado:** estás en `github.com/<tu-usuario>/github-copilot-teatralia-201`, con el texto «forked from …» bajo el nombre.
+**Resultado esperado:** estás en `github.com/<tu-usuario>/github-copilot-equipos-201`, con el texto «forked from …» bajo el nombre.
 
 > [!NOTE]
 > Muchas organizaciones de empresa no permiten hacer fork de repositorios externos. Por eso el curso usa tu cuenta personal.

@@ -232,7 +232,7 @@ gh pr create --repo "$(gh repo view --json nameWithOwner -q .nameWithOwner)" --b
 ```
 
 **Resultado esperado:** `gh` imprime la URL de la PR
-(`https://github.com/<tu-usuario>/github-copilot-teatralia-201/pull/<n>`). En la pestaña **Files changed** hay un
+(`https://github.com/<tu-usuario>/github-copilot-equipos-201/pull/<n>`). En la pestaña **Files changed** hay un
 solo fichero, `sections.tsx`.
 
 > [!NOTE]
