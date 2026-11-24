@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "github-copilot-teatralia-201",
+      "path": "/home/david/Cursos/github-copilot-teatralia-201"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true
+    }
+  }
+}

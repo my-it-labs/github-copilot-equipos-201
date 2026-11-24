@@ -1,0 +1,26 @@
+{
+  "name": "GitHub Copilot · Teatralia",
+  "dockerComposeFile": ["../infra/compose.yaml", "compose.devcontainer.yaml"],
+  "service": "workspace",
+  "runServices": ["postgres", "redis", "mailpit", "workspace"],
+  "workspaceFolder": "/workspaces/github-copilot-teatralia-201",
+  "shutdownAction": "stopCompose",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [5173, 5174, 8025, 3000, 3001, 5175],
+  "portsAttributes": {
+    "5173": { "label": "Tienda", "onAutoForward": "notify" },
+    "5174": { "label": "Backoffice", "onAutoForward": "notify" },
+    "8025": { "label": "Mailpit", "onAutoForward": "notify" },
+    "3000": { "label": "API", "onAutoForward": "silent" },
+    "3001": { "label": "Pagos (emulada)", "onAutoForward": "silent" },
+    "5175": { "label": "Editor (microfrontend)", "onAutoForward": "silent" }
+  },
+  "postCreateCommand": "sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client && make setup && npm --prefix teatralia/tools/mcp-teatralia install --no-audit --no-fund && make db-reset",
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitHub.copilot", "GitHub.copilot-chat", "dbaeumer.vscode-eslint", "vitest.explorer"]
+    }
+  }
+}

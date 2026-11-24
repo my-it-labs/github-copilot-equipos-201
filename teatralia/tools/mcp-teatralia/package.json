@@ -1,0 +1,18 @@
+{
+  "name": "mcp-teatralia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor MCP de solo lectura sobre la base de datos de Teatralia (curso de GitHub Copilot)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node server.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "pg": "^8.23.1",
+    "zod": "^4.1.12"
+  }
+}

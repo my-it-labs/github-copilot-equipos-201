@@ -1,0 +1,19 @@
+# Se combina con infra/compose.yaml. Las rutas relativas parten de infra/.
+services:
+  workspace:
+    image: mcr.microsoft.com/devcontainers/typescript-node:22
+    command: sleep infinity
+    volumes:
+      - ..:/workspaces/github-copilot-teatralia-201:cached
+    environment:
+      TEATRALIA_DEVCONTAINER: "1"
+      DATABASE_URL: postgres://teatralia:teatralia@postgres:5432/teatralia
+      REDIS_URL: redis://redis:6379
+      SMTP_HOST: mailpit
+      SMTP_PORT: "1025"
+      PAYMENTS_URL: http://localhost:3001
+      TICKETS_SECRET: teatralia-dev-solo-para-el-curso
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+      mailpit: { condition: service_started }

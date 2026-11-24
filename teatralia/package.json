@@ -1,0 +1,31 @@
+{
+  "name": "teatralia",
+  "private": true,
+  "description": "Teatralia — SaaS de venta de entradas para espectáculos",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,pagos,correo,tienda,backoffice,editor -c blue,magenta,yellow,green,cyan,gray \"npm:dev -w @teatralia/api\" \"npm:dev -w @teatralia/payments\" \"npm:dev -w @teatralia/notifier\" \"npm:dev -w @teatralia/storefront\" \"npm:dev -w @teatralia/backoffice\" \"npm:dev -w @teatralia/editor-mfe\"",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "db:reset": "npm run db:reset -w @teatralia/api",
+    "qr": "npm run qr -w @teatralia/api --"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.20.5",
+    "concurrently": "^10.0.6",
+    "eslint": "^10.13.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^5.0.5"
+  }
+}

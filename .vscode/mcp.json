@@ -1,0 +1,38 @@
+// Servidores MCP que Copilot Chat (modo Agent) puede usar en este repositorio.
+// VS Code los muestra en «MCP: List Servers» y en el botón de herramientas del chat.
+{
+  "servers": {
+    // Teatralia: preguntas de negocio sobre la base de datos, en solo lectura.
+    // Lo arranca VS Code como proceso local (stdio). Necesita las dependencias instaladas:
+    //   npm --prefix teatralia/tools/mcp-teatralia install
+    "teatralia": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/teatralia/tools/mcp-teatralia/server.ts"],
+      "env": {
+        // La misma base de datos que usa la API (en el Codespace ya está exportada)
+        "DATABASE_URL": "${env:DATABASE_URL}"
+      }
+    },
+
+    // GitHub: issues, pull requests y repositorios de tu cuenta, con el servidor remoto oficial.
+    // La primera vez VS Code te pide iniciar sesión con GitHub (OAuth).
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    }
+
+    // Alternativa: el mismo servidor de GitHub en local con Docker y un token personal (PAT).
+    // Útil si tu organización no permite el remoto. Sustituye la entrada "github" por esta:
+    // "github": {
+    //   "type": "stdio",
+    //   "command": "docker",
+    //   "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+    //   "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}" }
+    // }
+  }
+  // Para la alternativa, declara también la pregunta del token (VS Code no lo guarda en el repo):
+  // "inputs": [
+  //   { "type": "promptString", "id": "github_token", "description": "Token personal de GitHub", "password": true }
+  // ]
+}
